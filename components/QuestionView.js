@@ -49,7 +49,6 @@ const QuestionView = ({ questionMetaData, sendOption }) => {
 
       setTimeout(() => {
         sendOption(id);
-        // }, 200);
       }, 1500);
     }
   };
@@ -87,7 +86,7 @@ const QuestionView = ({ questionMetaData, sendOption }) => {
         <div className="mt-6 bg-app-border rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] py-4 px-3 text-lg font-normal text-app-header-blue">
           Q{questionIndex} {question}
         </div>
-        <div>
+        <div className="mb-10">
           {options?.map((eachOption) => {
             const { id, option } = eachOption;
             return selectedOption === id ? (
@@ -103,7 +102,9 @@ const QuestionView = ({ questionMetaData, sendOption }) => {
             ) : (
               <div
                 key={id}
-                className={`mt-6 bg-white rounded-[10px] py-4 px-3 text-lg font-light text-app-options-blue border border-app-options-border cursor-pointer`}
+                className={`mt-6 bg-white rounded-[10px] py-4 px-3 text-lg font-light text-app-options-blue border border-app-options-border ${
+                  selectedOption === "" ? "cursor-pointer" : "cursor-default"
+                } `}
                 onClick={() => handleSelectOption(id)}
               >
                 {option}
