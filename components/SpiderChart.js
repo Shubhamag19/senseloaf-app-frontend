@@ -18,7 +18,7 @@ const data = [
 
 const SpiderChart = () => {
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="100%" height={300}>
       <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
         <defs>
           <linearGradient id="fillGradient" x1="0" y1="0" x2="0" y2="1">

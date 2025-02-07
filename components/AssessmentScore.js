@@ -118,7 +118,7 @@ const AssessmentScore = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full">
+              <div className="w-full ml-5 flex items-center">
                 <SpiderChart />
               </div>
             </div>

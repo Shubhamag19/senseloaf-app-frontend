@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import LeftPane from "@/components/LeftPane";
 import QuestionView from "@/components/QuestionView";
 import AssessmentScore from "@/components/AssessmentScore";
@@ -10,6 +11,12 @@ const Assessment = () => {
   const [questionMetaData, setQuestionMetaData] = useState();
   const [currentSetIndex, setCurrentSetIndex] = useState(0);
   const [showScore, setShowScore] = useState(false);
+
+  const router = useRouter();
+
+  const handleOpenHome = () => {
+    router.push("/");
+  };
 
   const handleDataReceived = useCallback((response) => {
     if (response.type === "titles") {
@@ -34,7 +41,10 @@ const Assessment = () => {
 
   return (
     <div className="h-[100vh] bg-white ">
-      <p className="text-app-header-blue text-[30px] font-medium pl-8 py-3 bg-app-faded-white ">
+      <p
+        className="text-app-header-blue text-[30px] font-medium pl-8 py-3 bg-app-faded-white cursor-pointer"
+        onClick={handleOpenHome}
+      >
         Provn.ai
       </p>
 
