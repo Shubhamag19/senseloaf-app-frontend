@@ -49,7 +49,7 @@ const QuestionView = ({ questionMetaData, sendOption }) => {
 
       setTimeout(() => {
         sendOption(id);
-      }, 1500);
+      }, 2000);
     }
   };
 
