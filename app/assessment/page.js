@@ -7,7 +7,7 @@ import useWebSocket from "@/customHooks/useWebSocket";
 
 const Assessment = () => {
   const [assessmentTitles, setAssessmentTitles] = useState([]);
-  const [questionMetaData, setQuestionMetaData] = useState(null);
+  const [questionMetaData, setQuestionMetaData] = useState();
   const [currentSetIndex, setCurrentSetIndex] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
